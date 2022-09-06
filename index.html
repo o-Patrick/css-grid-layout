@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				color: #000;
+			}
+
+			.cabecalho {
+				grid-area: cabecalho;
+			}
+
+			.principal {
+				grid-area: principal;
+			}
+
+			.lateral {
+				grid-area: lateral;
+			}
+
+			.rodape {
+				grid-area: rodape;
+			}
+
+			.container {
+				display: grid;
+				grid-template-columns: auto auto auto auto;
+				/* gap: 10px; */
+			}
+
+			.item {
+				background-color: #048;
+				color: #FFF;
+				border: 1px solid #000;
+				text-align: center;
+			}
+
+			.dois-por-tres {
+				grid-column: 1 / span 2;
+				grid-row: 1 / span 3;
+			}
+
+			.quebra-linha {
+				grid-column: 1 / span3;
+			}
+
+			.area {
+				grid-area: 1 / 1 / span 2 / span 2;
+			}
+
+			.template-areas {
+				grid-template-areas:
+					"cabecalho cabecalho cabecalho cabecalho"
+					"principal principal . lateral"
+					"rodape rodape rodape rodape"
+				;
+			}
+		</style>
+		<title>CSS Grid Layout</title>
+	</head>
+	<body>
+		<div class="container template-areas">
+			<div class="item cabecalho"> CFB Cursos 1 </div>
+			<div class="item principal"> CFB Cursos 2 </div>
+			<div class="item lateral"> CFB Cursos 3 </div>
+			<div class="item rodape"> CFB Cursos 4 </div>
+			<!-- <div class="item"> CFB Cursos 5 </div>
+			<div class="item"> CFB Cursos 6 </div>
+			<div class="item"> CFB Cursos 7 </div>
+			<div class="item"> CFB Cursos 8 </div>
+			<div class="item"> CFB Cursos 9 </div> -->
+		</div>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+CSS Grid Layout
+
+- display:
+	- grid: usa a área padrão.
+	- inline-grid: usa a área do maior elemento.
+
+- grid-template-columns:
+	- quantas coluna terá a grade; a cada valor (auto e medidas padrão), uma nova coluna e criada.
+
+- grid-template-rows:
+	- altura das linhas na grade; cada valor (auto e medidas padrão) é respectivo à linha na ordem de digitação; o número de linhas permanece o mesmo.
+
+- grid-gap, grid-column-gap e grid-row-gap:
+	- OBSOLETAS, usar GAP, COLUMN-GAP e ROW-GAP, respectivamente, no lugar;
+
+- gap:
+	- primeiro valor define o espaçõ entre linhas e o segundo, o espaço entre colunas numa grade.
+
+- row-gap:
+	- define o espaço entre linhas numa grade.
+
+- column-gap:
+	- define o espaço entre colunas numa grade.
+
+- grid-column-start:
+	- define em qual coluna o elemento começa (ex: se tenho três colunas e o start está para 2, então o elemento pula a coluna 1 e começa na 2)
+
+- grid-column-end:
+	- define em qual coluna o elemento termina (ex: se tenho três colunas e o end está para 3, então o elemento ocupa as colunas 1 e 2, ou seja, vai até a 3, mas não a ocupa; para ocupar a 3, sem colocar 4, usar: span 3)
+
+- grid-column:
+	- shorthand para grid-column-start e grid-column-end.
+	- no lugar de valores comuns, usamos x / y (barra inclusa), para além dos globais
+
+- grid-row-start:
+	- define em qual linha o elemento começa (ex: se tenho três linhas e o start está para 2, então o elemento pula a linha 1 e começa na 2)
+
+- grid-row-end:
+	- define em qual linha o elemento termina (ex: se tenho três linhas e o end está para 3, então o elemento ocupa as linhas 1 e 2, ou seja, vai até a 3, mas não a ocupa; para ocupar a 3, sem colocar 4, usar: span 3)
+
+- grid-row:
+	- shorthand para grid-row-start e grid-row-end.
+	- no lugar de valores comuns, usamos x / y (barra inclusa), para além dos globais
+
+- grid-area:
+	- shorthand (?) para grid-row-start, grid-column-start, grid-row-end, grid-column-end, respectivamente.
+	- também aceita um nome qualquer da área (ex: grid-area: lateral;)
+
+- grid-template-areas:
+	- permite montar uma grid template
+	- primeiro é necessário definir um nome de uma área usando grid-area: nome-qualquer.
+	- em seguida, usar grid-template-areas para disponibilizar os elementos dentro da página, de acordo com o número de colunas definido, como no exemplo (com quatro colunas):
+		grid-template-areas:
+			"cabecalho cabecalho cabecalho cabecalho"
+			"principal principal . lateral"
+			"rodape rodape rodape rodape"
+		;
+		(o . deixa a coluna vazia)
